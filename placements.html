@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Placements – BMS College of Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  .page-hero-dark { background: var(--navy-deep); padding: 72px 0 56px; position: relative; overflow: hidden; }
+  .page-hero-dark::before { content: ''; position: absolute; inset: 0; opacity: .05; background-image: repeating-linear-gradient(45deg, white 0, white 1px, transparent 0, transparent 50%); background-size: 32px 32px; }
+  .page-hero-dark .page-hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+  .page-hero-dark h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); color: var(--white); font-weight: 800; margin-bottom: 12px; }
+  .page-hero-dark h1 em { font-style: normal; color: var(--gold-light); }
+  .page-hero-dark p { color: rgba(255,255,255,.7); font-size: 1.05rem; max-width: 560px; line-height: 1.7; }
+
+  /* Chart dashboard */
+  .charts-dashboard { background: #f4f6fb; padding: 40px 0; }
+  .charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .chart-panel { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 2px 12px rgba(11,31,75,.07); }
+  .chart-panel-title { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--navy); font-size: 15px; margin-bottom: 20px; }
+  .chart-panel-title .cp-icon { font-size: 18px; }
+  .chart-wrap { position: relative; height: 260px; }
+  @media (max-width: 768px) { .charts-grid { grid-template-columns: 1fr; } .chart-wrap { height: 220px; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">
+      <div class="nav-logo-badge">BMS</div>
+      <div class="nav-brand-text"><span>BMS College of Engineering</span><span>Est. 1946 · Bengaluru</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="academics.html">Academics</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html" class="active">Placements</a>
+      <a href="campus-life.html">Campus Life</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="#" class="nav-cta" onclick="openModal()">Request Info</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="academics.html" onclick="closeMenu()">Academics</a>
+    <a href="admissions.html" onclick="closeMenu()">Admissions</a>
+    <a href="placements.html" onclick="closeMenu()">Placements</a>
+    <a href="campus-life.html" onclick="closeMenu()">Campus Life</a>
+    <a href="roadmap.html" onclick="closeMenu()">Roadmap</a>
+    <a href="#" onclick="openModal()">Request Info</a>
+  </div>
+</nav>
+
+<main id="main">
+<div class="page-hero-dark">
+  <div class="page-hero-inner">
+    <div class="hero-badge" style="margin-bottom:16px;"><div class="hero-dot"></div><span>Placement Dashboard</span></div>
+    <h1>Career <em>Outcomes</em></h1>
+    <p>Real-time placement analytics for BMSCE — updated for the 2024–25 recruitment cycle. 300+ companies visit campus annually.</p>
+  </div>
+</div>
+
+<section class="placements" style="padding-top:56px;" aria-label="Placement Statistics">
+  <div class="container">
+    <div class="placement-header">
+      <div>
+        <div class="section-label"><span>Statistics</span></div>
+        <h2 class="section-title">Placement Dashboard</h2>
+        <p class="section-desc">Real-time placement analytics for BMSCE — updated for the 2024–25 recruitment cycle.</p>
+      </div>
+      <div class="placement-year-tabs">
+        <button class="year-tab active" onclick="switchYear('2025', this)">2024–25</button>
+        <button class="year-tab" onclick="switchYear('2024', this)">2023–24</button>
+        <button class="year-tab" onclick="switchYear('2023', this)">2022–23</button>
+      </div>
+    </div>
+
+    <div class="kpi-row" id="kpiRow">
+      <div class="kpi-card"><span class="kpi-num" id="kpiTotal">968</span><div class="kpi-label">Students Placed</div><div class="kpi-change kpi-up">▲ +16 vs last year</div></div>
+      <div class="kpi-card"><span class="kpi-num" id="kpiHighest">₹51.5L</span><div class="kpi-label">Highest Package</div><div class="kpi-change kpi-up">▲ Cohesity, JP Morgan</div></div>
+      <div class="kpi-card"><span class="kpi-num" id="kpiAvg">₹11.4L</span><div class="kpi-label">Average Package</div><div class="kpi-change kpi-up">▲ +13.8% YoY</div></div>
+      <div class="kpi-card"><span class="kpi-num" id="kpiRate">74%</span><div class="kpi-label">Placement Rate</div><div class="kpi-change kpi-neutral">— Eligible Students</div></div>
+    </div>
+
+    <!-- Chart.js Dashboard -->
+    </div>
+</section>
+
+<section class="charts-dashboard" aria-label="Placement Charts">
+  <div class="container">
+    <div class="charts-grid">
+
+      <!-- 1. Students Placed Year-wise -->
+      <div class="chart-panel">
+        <div class="chart-panel-title"><span class="cp-icon">🎓</span> Students Placed (Year-wise)</div>
+        <div class="chart-wrap"><canvas id="chartStudents" aria-label="Students placed year-wise bar chart"></canvas></div>
+      </div>
+
+      <!-- 2. Package Trend -->
+      <div class="chart-panel">
+        <div class="chart-panel-title"><span class="cp-icon">₹</span> Package Trend (LPA)</div>
+        <div class="chart-wrap"><canvas id="chartPackage" aria-label="Package trend line chart"></canvas></div>
+      </div>
+
+      <!-- 3. Companies Visited -->
+      <div class="chart-panel">
+        <div class="chart-panel-title"><span class="cp-icon">🏢</span> Companies Visited</div>
+        <div class="chart-wrap"><canvas id="chartCompanies" aria-label="Companies visited bar chart"></canvas></div>
+      </div>
+
+      <!-- 4. Branch-wise Offers -->
+      <div class="chart-panel">
+        <div class="chart-panel-title"><span class="cp-icon">📊</span> Branch-wise Offers (2024-25)</div>
+        <div class="chart-wrap"><canvas id="chartBranch" aria-label="Branch-wise offers grouped bar chart"></canvas></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="placements" style="padding-top:40px;" aria-label="Placement Details continued">
+  <div class="container">
+
+    <div class="chart-card" style="margin-bottom:24px;">
+      <div class="chart-title">Branch-wise Placement Summary <span>2024–25</span></div>
+      <div class="branch-table-wrap">
+        <table class="branch-table" aria-label="Branch-wise placement data">
+          <thead><tr><th>Branch</th><th>Eligible</th><th>Placed</th><th>Placement %</th><th>Avg Package</th><th>Highest</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>CSE + AI&amp;ML</td><td>240</td><td>228</td><td><div class="td-bar"><div class="td-bar-fill" style="width:60px;"></div> 95%</div></td><td>₹14.2 LPA</td><td>₹51.5 LPA</td><td><span class="badge-green">Excellent</span></td></tr>
+            <tr><td>Information Science</td><td>120</td><td>110</td><td><div class="td-bar"><div class="td-bar-fill" style="width:55px;"></div> 91%</div></td><td>₹13.1 LPA</td><td>₹46.0 LPA</td><td><span class="badge-green">Excellent</span></td></tr>
+            <tr><td>ECE / EI</td><td>180</td><td>148</td><td><div class="td-bar"><div class="td-bar-fill" style="width:46px;"></div> 82%</div></td><td>₹10.8 LPA</td><td>₹32.0 LPA</td><td><span class="badge-green">Good</span></td></tr>
+            <tr><td>EEE</td><td>90</td><td>69</td><td><div class="td-bar"><div class="td-bar-fill" style="width:42px;"></div> 76%</div></td><td>₹9.0 LPA</td><td>₹22.0 LPA</td><td><span class="badge-yellow">Average</span></td></tr>
+            <tr><td>Mechanical</td><td>120</td><td>84</td><td><div class="td-bar"><div class="td-bar-fill" style="width:35px;"></div> 70%</div></td><td>₹7.5 LPA</td><td>₹18.0 LPA</td><td><span class="badge-yellow">Average</span></td></tr>
+            <tr><td>Civil</td><td>60</td><td>38</td><td><div class="td-bar"><div class="td-bar-fill" style="width:26px;"></div> 63%</div></td><td>₹6.0 LPA</td><td>₹12.0 LPA</td><td><span class="badge-yellow">Average</span></td></tr>
+            <tr><td>Chemical / Bio-tech</td><td>60</td><td>35</td><td><div class="td-bar"><div class="td-bar-fill" style="width:20px;"></div> 58%</div></td><td>₹5.2 LPA</td><td>₹10.0 LPA</td><td><span class="badge-yellow">Average</span></td></tr>
+            <tr><td>MBA</td><td>60</td><td>46</td><td><div class="td-bar"><div class="td-bar-fill" style="width:28px;"></div> 76%</div></td><td>₹8.5 LPA</td><td>₹20.0 LPA</td><td><span class="badge-yellow">Average</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="chart-card" style="margin-bottom:40px;">
+      <div class="chart-title">Top Recruiting Companies <span>300+ Companies Visit Annually</span></div>
+      <div class="recruiters-grid">
+        <div class="recruiter-card"><div class="recruiter-emoji">🟡</div><div class="recruiter-name">Amazon</div><div class="recruiter-package">Up to ₹24L</div></div>
+        <div class="recruiter-card"><div class="recruiter-emoji">🔷</div><div class="recruiter-name">Microsoft</div><div class="recruiter-package">Up to ₹40L</div></div>
+        <div class="recruiter-card"><div class="recruiter-emoji">🟣</div><div class="recruiter-name">Accenture</div><div class="recruiter-package">₹4.5–8L</div></div>
+        <div class="recruiter-card"><div class="recruiter-emoji">🔵</div><div class="recruiter-name">JP Morgan</div><div class="recruiter-package">Up to ₹45L</div></div>
+        <div class="recruiter-card"><div class="recruiter-emoji">🟠</div><div class="recruiter-name">Cohesity</div><div class="recruiter-package">Up to ₹51.5L</div></div>
+        <div class="recruiter-card"><div class="recruiter-emoji">🔴</div><div class="recruiter-name">Oracle</div><div class="recruiter-package">Up to ₹22L</div></div>
+        <div class="recruiter-card"><div class="recruiter-emoji">🟢</div><div class="recruiter-name">Infosys</div><div class="recruiter-package">₹3.6–8L</div></div>
+        <div class="recruiter-card"><div class="recruiter-emoji">⬛</div><div class="recruiter-name">IBM</div><div class="recruiter-package">₹4–14L</div></div>
+        <div class="recruiter-card"><div class="recruiter-emoji">🔶</div><div class="recruiter-name">TCS</div><div class="recruiter-package">₹3.3–7L</div></div>
+        <div class="recruiter-card"><div class="recruiter-emoji">🔵</div><div class="recruiter-name">Wipro</div><div class="recruiter-package">₹3.5–6.5L</div></div>
+        <div class="recruiter-card"><div class="recruiter-emoji">🟤</div><div class="recruiter-name">L&amp;T</div><div class="recruiter-package">₹6–12L</div></div>
+        <div class="recruiter-card"><div class="recruiter-emoji">🟡</div><div class="recruiter-name">Flipkart</div><div class="recruiter-package">Up to ₹30L</div></div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:8px;"><div class="chart-title" style="color:rgba(255,255,255,.85);font-size:16px;margin-bottom:0;">How Placements Work at BMSCE</div></div>
+    <div class="placement-process">
+      <div class="process-step"><span class="process-num">01</span><div class="process-title">Registration</div><div class="process-desc">Students register with the Placement &amp; Training Centre in their 6th semester</div></div>
+      <div class="process-step"><span class="process-num">02</span><div class="process-title">Pre-Placement Training</div><div class="process-desc">Aptitude, soft skills, coding, mock interviews — 100+ hours of training</div></div>
+      <div class="process-step"><span class="process-num">03</span><div class="process-title">Company Drives</div><div class="process-desc">On-campus recruitment drives from August to March each academic year</div></div>
+      <div class="process-step"><span class="process-num">04</span><div class="process-title">Offer &amp; Joining</div><div class="process-desc">Pre-placement offers, final offers, and joining assistance provided to all placed students</div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="nav-logo-badge">BMS</div>
+          <div><div style="color:white;font-family:'Playfair Display',serif;font-weight:700;">BMS College of Engineering</div><div style="font-size:12px;color:var(--gold-light);">Est. 1946 · Bengaluru</div></div>
+        </div>
+        <p>Bull Temple Road, Basavanagudi, Bengaluru – 560019, Karnataka, India.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Academics</h4><a href="academics.html">B.E. Programs</a><a href="academics.html">M.Tech / MBA / MCA</a><a href="academics.html">Ph.D. Programs</a></div>
+      <div class="footer-col"><h4>Quick Links</h4><a href="admissions.html">Admissions 2025–26</a><a href="placements.html">Placement Data</a><a href="#">Fee Structure</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="tel:+918026622130">📞 +91 80 2662 2130</a><a href="mailto:principal@bmsce.ac.in">✉️ principal@bmsce.ac.in</a><a href="#" onclick="openModal()">📬 Request Info</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 BMS College of Engineering, Bengaluru. All rights reserved.</p>
+      <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Accessibility</a><a href="#">RTI</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="float-btn" onclick="openModal()" aria-label="Request Information">📬 <span>Request Info</span></button>
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <h3 id="modalTitle">Request Information</h3>
+    <p>Tell us your interests and we'll send personalized info about BMSCE programs.</p>
+    <div class="modal-form">
+      <input type="text" placeholder="Full Name *" required>
+      <input type="email" placeholder="Email Address *" required>
+      <input type="tel" placeholder="Phone Number">
+      <select><option value="">Program of Interest</option><option>B.E. CSE</option><option>B.E. AI &amp; ML</option><option>B.E. ECE</option><option>M.Tech</option><option>MBA / MCA</option></select>
+      <button class="btn-primary" style="justify-content:center;" onclick="submitForm()">Send Request →</button>
+    </div>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+<script>
+// KPI year switcher
+const yearData = {
+  '2025': { total: '968', highest: '₹51.5L', avg: '₹11.4L', rate: '74%' },
+  '2024': { total: '952', highest: '₹33.1L', avg: '₹10.0L', rate: '71%' },
+  '2023': { total: '1059', highest: '₹30.0L', avg: '₹8.5L', rate: '68%' },
+};
+function switchYear(year, btn) {
+  document.querySelectorAll('.year-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const d = yearData[year];
+  document.getElementById('kpiTotal').textContent = d.total;
+  document.getElementById('kpiHighest').textContent = d.highest;
+  document.getElementById('kpiAvg').textContent = d.avg;
+  document.getElementById('kpiRate').textContent = d.rate;
+}
+
+// Shared chart defaults
+Chart.defaults.font.family = "'DM Sans', sans-serif";
+Chart.defaults.font.size = 12;
+Chart.defaults.color = '#5A637A';
+
+const years = ['2019-20','2020-21','2021-22','2022-23','2023-24','2024-25'];
+
+// 1. Students Placed (Year-wise) — bar chart
+new Chart(document.getElementById('chartStudents'), {
+  type: 'bar',
+  data: {
+    labels: years,
+    datasets: [{
+      label: 'Students Placed',
+      data: [840, 870, 1010, 1059, 952, 968],
+      backgroundColor: ['#7EC8E3','#7EC8E3','#5AAFC7','#5AAFC7','#1A3A7A','#0B1F4B'],
+      borderRadius: 4,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'top', labels: { boxWidth: 12, padding: 16 } } },
+    scales: {
+      y: { beginAtZero: true, max: 1200, ticks: { stepSize: 200 }, grid: { color: '#eee' } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// 2. Package Trend — dual line chart
+new Chart(document.getElementById('chartPackage'), {
+  type: 'line',
+  data: {
+    labels: years,
+    datasets: [
+      {
+        label: 'Highest (LPA)',
+        data: [28, 30, 51, 33, 38, 51.5],
+        borderColor: '#e05252',
+        backgroundColor: 'rgba(224,82,82,0.08)',
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: '#fff',
+        pointBorderColor: '#e05252',
+        pointBorderWidth: 2,
+        pointRadius: 5,
+      },
+      {
+        label: 'Average (LPA)',
+        data: [6.5, 7.2, 8.5, 8.5, 10.0, 11.4],
+        borderColor: '#2e8b57',
+        backgroundColor: 'rgba(46,139,87,0.05)',
+        fill: false,
+        tension: 0.4,
+        pointBackgroundColor: '#fff',
+        pointBorderColor: '#2e8b57',
+        pointBorderWidth: 2,
+        pointRadius: 5,
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'top', labels: { boxWidth: 12, padding: 16, usePointStyle: true } } },
+    scales: {
+      y: { beginAtZero: false, min: 0, max: 55, ticks: { stepSize: 5 }, grid: { color: '#eee' } },
+      x: { grid: { color: '#eee' } }
+    }
+  }
+});
+
+// 3. Companies Visited — bar chart (3 years, different colors)
+new Chart(document.getElementById('chartCompanies'), {
+  type: 'bar',
+  data: {
+    labels: ['2022-23','2023-24','2024-25'],
+    datasets: [{
+      label: 'Companies',
+      data: [358, 346, 385],
+      backgroundColor: ['#2e8b57','#1A3A7A','#C9982A'],
+      borderRadius: 4,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'top', labels: { boxWidth: 12, padding: 16 } } },
+    scales: {
+      y: { min: 300, max: 400, ticks: { stepSize: 10 }, grid: { color: '#eee' } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// 4. Branch-wise Offers (2024-25) — grouped bar
+new Chart(document.getElementById('chartBranch'), {
+  type: 'bar',
+  data: {
+    labels: ['CSE','ISE','ECE','AIML','MCA','MTech','ME','EEE','ETE','IEM','CH','CV','Aero','BT'],
+    datasets: [
+      {
+        label: 'Offers',
+        data: [238, 200, 218, 140, 75, 65, 50, 65, 40, 35, 30, 28, 22, 15],
+        backgroundColor: '#1A3A7A',
+        borderRadius: 3,
+      },
+      {
+        label: 'Placed',
+        data: [160, 155, 135, 90, 60, 55, 38, 50, 32, 28, 22, 20, 16, 10],
+        backgroundColor: '#C9982A',
+        borderRadius: 3,
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'top', labels: { boxWidth: 12, padding: 16 } } },
+    scales: {
+      y: { beginAtZero: true, max: 250, ticks: { stepSize: 50 }, grid: { color: '#eee' } },
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } }
+    }
+  }
+});
+</script>
+</body>
+</html>

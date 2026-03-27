@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academics – BMS College of Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">
+      <div class="nav-logo-badge">BMS</div>
+      <div class="nav-brand-text"><span>BMS College of Engineering</span><span>Est. 1946 · Bengaluru</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="academics.html" class="active">Academics</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html">Placements</a>
+      <a href="campus-life.html">Campus Life</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="#" class="nav-cta" onclick="openModal()">Request Info</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="academics.html" onclick="closeMenu()">Academics</a>
+    <a href="admissions.html" onclick="closeMenu()">Admissions</a>
+    <a href="placements.html" onclick="closeMenu()">Placements</a>
+    <a href="campus-life.html" onclick="closeMenu()">Campus Life</a>
+    <a href="roadmap.html" onclick="closeMenu()">Roadmap</a>
+    <a href="#" onclick="openModal()">Request Info</a>
+  </div>
+</nav>
+
+<main id="main">
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-badge" style="margin-bottom:16px;"><div class="hero-dot"></div><span>Programs &amp; Departments</span></div>
+    <h1>Academic <em>Programs</em></h1>
+    <p>14 undergraduate, 15 postgraduate, and doctoral programs across conventional and emerging engineering fields — all under VTU affiliation with autonomous curriculum.</p>
+  </div>
+</div>
+
+<section class="academics" aria-label="Academic programs">
+  <div class="container">
+    <div class="filter-bar" role="group" aria-label="Filter programs">
+      <button class="filter-btn active" onclick="filterPrograms('all', this)">All Programs</button>
+      <button class="filter-btn" onclick="filterPrograms('ug', this)">B.E. / B.Tech</button>
+      <button class="filter-btn" onclick="filterPrograms('pg', this)">M.Tech</button>
+      <button class="filter-btn" onclick="filterPrograms('mba', this)">MBA / MCA</button>
+      <button class="filter-btn" onclick="filterPrograms('phd', this)">Ph.D.</button>
+      <button class="filter-btn" onclick="filterPrograms('cs', this)">CS &amp; IT</button>
+      <button class="filter-btn" onclick="filterPrograms('core', this)">Core Engineering</button>
+    </div>
+    <div class="programs-grid" id="programsGrid">
+      <div class="program-card" data-cat="ug cs">
+        <div class="program-header"><div class="program-icon">💻</div><div><div class="program-title">Computer Science &amp; Engineering</div><div class="program-tag">B.E. · 4 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">120 Seats</span><span class="meta-chip">KCET / COMEDK</span><span class="meta-chip">Autonomous</span></div>
+          <ul class="program-outcomes"><li>Data Structures, Algorithms, OS, DBMS</li><li>Careers: Software Engineer, Cloud Architect, Data Scientist</li><li>Top recruiters: Google, Amazon, Microsoft, Flipkart</li></ul></div>
+      </div>
+      <div class="program-card" data-cat="ug cs">
+        <div class="program-header" style="background:#1A3A7A;"><div class="program-icon">🤖</div><div><div class="program-title">AI &amp; Machine Learning</div><div class="program-tag">B.E. · 4 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">60 Seats</span><span class="meta-chip">KCET / COMEDK</span><span class="meta-chip">New Branch</span></div>
+          <ul class="program-outcomes"><li>Deep Learning, NLP, Computer Vision, MLOps</li><li>Careers: ML Engineer, AI Researcher, Product Manager</li><li>Industry-aligned curriculum with IBM &amp; NVIDIA</li></ul></div>
+      </div>
+      <div class="program-card" data-cat="ug cs">
+        <div class="program-header" style="background:#162B5E;"><div class="program-icon">🔗</div><div><div class="program-title">Information Science &amp; Engg.</div><div class="program-tag">B.E. · 4 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">60 Seats</span><span class="meta-chip">KCET / COMEDK</span></div>
+          <ul class="program-outcomes"><li>Networks, Cybersecurity, Cloud, Big Data</li><li>Careers: Network Engineer, Cybersecurity Analyst</li><li>Strong placement track record (CSE-level packages)</li></ul></div>
+      </div>
+      <div class="program-card" data-cat="ug cs">
+        <div class="program-header" style="background:#1D3461;"><div class="program-icon">📡</div><div><div class="program-title">Electronics &amp; Communication Engg.</div><div class="program-tag">B.E. · 4 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">120 Seats</span><span class="meta-chip">KCET / COMEDK</span></div>
+          <ul class="program-outcomes"><li>VLSI, Embedded Systems, Signal Processing, IoT</li><li>Careers: VLSI Engineer, RF Engineer, IoT Developer</li><li>Collaborations with Texas Instruments &amp; Qualcomm</li></ul></div>
+      </div>
+      <div class="program-card" data-cat="ug core">
+        <div class="program-header" style="background:#2C3E50;"><div class="program-icon">⚙️</div><div><div class="program-title">Mechanical Engineering</div><div class="program-tag">B.E. · 4 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">120 Seats</span><span class="meta-chip">KCET / COMEDK</span></div>
+          <ul class="program-outcomes"><li>Thermodynamics, Fluid Mechanics, CAD/CAM, Robotics</li><li>Careers: Design Engineer, Manufacturing Engineer, R&amp;D</li><li>L&amp;T, ISRO, HAL, Bosch visit campus</li></ul></div>
+      </div>
+      <div class="program-card" data-cat="ug core">
+        <div class="program-header" style="background:#1B4332;"><div class="program-icon">🏗️</div><div><div class="program-title">Civil Engineering</div><div class="program-tag">B.E. · 4 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">60 Seats</span><span class="meta-chip">KCET / COMEDK</span></div>
+          <ul class="program-outcomes"><li>Structural Analysis, Environmental Engg., GIS, Smart Cities</li><li>Careers: Structural Engineer, Urban Planner, Project Manager</li><li>Consultancies, Government bodies, Prestige Group</li></ul></div>
+      </div>
+      <div class="program-card" data-cat="ug core">
+        <div class="program-header" style="background:#4A1942;"><div class="program-icon">✈️</div><div><div class="program-title">Aerospace Engineering</div><div class="program-tag">B.E. · 4 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">30 Seats</span><span class="meta-chip">COMEDK</span><span class="meta-chip">Emerging</span></div>
+          <ul class="program-outcomes"><li>Aerodynamics, Propulsion, Spacecraft Design, CFD</li><li>Careers: Aerospace Engineer, Defense R&amp;D, ISRO, HAL</li><li>New branch — growing placement opportunities</li></ul></div>
+      </div>
+      <div class="program-card" data-cat="ug core">
+        <div class="program-header" style="background:#2D1B00;"><div class="program-icon">⚡</div><div><div class="program-title">Electrical &amp; Electronics Engg.</div><div class="program-tag">B.E. · 4 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">60 Seats</span><span class="meta-chip">KCET / COMEDK</span></div>
+          <ul class="program-outcomes"><li>Power Systems, Control Systems, Smart Grid, EV Technology</li><li>Careers: Power Engineer, Automation Specialist</li><li>BHEL, Siemens, ABB on-campus recruiters</li></ul></div>
+      </div>
+      <div class="program-card" data-cat="pg cs">
+        <div class="program-header" style="background:#0B3D0B;"><div class="program-icon">🎓</div><div><div class="program-title">M.Tech – Computer Science</div><div class="program-tag">M.Tech · 2 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">18 Seats</span><span class="meta-chip">GATE / PGCET</span></div>
+          <ul class="program-outcomes"><li>Advanced Algorithms, AI, Distributed Systems, Research</li><li>Careers: Senior Developer, Research Scientist, Faculty</li></ul></div>
+      </div>
+      <div class="program-card" data-cat="mba">
+        <div class="program-header" style="background:#1A0A3E;"><div class="program-icon">📊</div><div><div class="program-title">MBA – Technology Management</div><div class="program-tag">MBA · 2 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">60 Seats</span><span class="meta-chip">KMAT / CMAT / PGCET</span></div>
+          <ul class="program-outcomes"><li>Business Analytics, FinTech, Operations, Strategy</li><li>Careers: Product Manager, Consultant, Entrepreneur</li><li>Ranked #185 by Business Today 2024</li></ul></div>
+      </div>
+      <div class="program-card" data-cat="mba">
+        <div class="program-header" style="background:#0A2E3E;"><div class="program-icon">🖥️</div><div><div class="program-title">MCA – Computer Applications</div><div class="program-tag">MCA · 2 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">30 Seats</span><span class="meta-chip">KMAT / PGCET</span></div>
+          <ul class="program-outcomes"><li>Software Engineering, Web Dev, Enterprise Applications</li><li>Careers: Application Developer, Systems Analyst</li></ul></div>
+      </div>
+      <div class="program-card" data-cat="phd">
+        <div class="program-header" style="background:#2C1810;"><div class="program-icon">🔬</div><div><div class="program-title">Ph.D. Programs</div><div class="program-tag">Doctoral · 3–5 Years</div></div></div>
+        <div class="program-body"><div class="program-meta"><span class="meta-chip">14 Research Centers</span><span class="meta-chip">350+ Scholars</span></div>
+          <ul class="program-outcomes"><li>Engineering, Management, Science disciplines</li><li>160+ PhDs produced; AICTE NDF Fellowship available</li><li>GIAN Projects, World Bank–funded TEQIP collaborations</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="nav-logo-badge">BMS</div>
+          <div><div style="color:white;font-family:'Playfair Display',serif;font-weight:700;">BMS College of Engineering</div><div style="font-size:12px;color:var(--gold-light);">Est. 1946 · Bengaluru</div></div>
+        </div>
+        <p>Bull Temple Road, Basavanagudi, Bengaluru – 560019, Karnataka, India.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Academics</h4><a href="academics.html">B.E. Programs</a><a href="academics.html">M.Tech / MBA / MCA</a><a href="academics.html">Ph.D. Programs</a><a href="#">Timetable</a><a href="#">Results</a></div>
+      <div class="footer-col"><h4>Quick Links</h4><a href="admissions.html">Admissions 2025–26</a><a href="placements.html">Placement Data</a><a href="#">Fee Structure</a><a href="#">Scholarships</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="tel:+918026622130">📞 +91 80 2662 2130</a><a href="mailto:principal@bmsce.ac.in">✉️ principal@bmsce.ac.in</a><a href="#" onclick="openModal()">📬 Request Info</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 BMS College of Engineering, Bengaluru. All rights reserved.</p>
+      <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Accessibility</a><a href="#">RTI</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="float-btn" onclick="openModal()" aria-label="Request Information">📬 <span>Request Info</span></button>
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <h3 id="modalTitle">Request Information</h3>
+    <p>Tell us your interests and we'll send personalized info about BMSCE programs.</p>
+    <div class="modal-form">
+      <input type="text" placeholder="Full Name *" required>
+      <input type="email" placeholder="Email Address *" required>
+      <input type="tel" placeholder="Phone Number">
+      <select><option value="">Program of Interest</option><option>B.E. CSE</option><option>B.E. AI &amp; ML</option><option>B.E. ECE</option><option>M.Tech</option><option>MBA / MCA</option><option>Ph.D.</option></select>
+      <button class="btn-primary" style="justify-content:center;" onclick="submitForm()">Send Request →</button>
+    </div>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+<script>
+function filterPrograms(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.program-card').forEach(card => {
+    if (cat === 'all') card.classList.remove('hidden');
+    else card.classList.toggle('hidden', !card.dataset.cat.includes(cat));
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Placement Roadmap - BMS College of Engineering</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="shared.css"><style>.roadmap-page{background:#f4f6fb;min-height:100vh}.roadmap-header{background:linear-gradient(135deg,#0B1F4B 0%,#162B5E 60%,#1A3A7A 100%);padding:40px 0 0;border-bottom:none;position:relative;overflow:hidden;}.roadmap-header::before{content:"";position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(45deg,white 0,white 1px,transparent 0,transparent 50%);background-size:28px 28px;pointer-events:none;}.roadmap-header-inner{max-width:1100px;margin:0 auto;padding:0 24px}.roadmap-header h1{font-family:"Playfair Display",serif;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;font-weight:800;margin-bottom:6px}.roadmap-header p{color:rgba(255,255,255,.72);font-size:15px;margin-bottom:28px}.year-tabs{display:flex;gap:0;border-bottom:2px solid rgba(255,255,255,.15)}.year-tab-btn{padding:12px 28px;font-size:15px;font-weight:600;color:rgba(255,255,255,.65);background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;font-family:"DM Sans",sans-serif;transition:color .2s;white-space:nowrap}.year-tab-btn:hover{color:#fff}.year-tab-btn.active{color:#fff;border-bottom-color:#C9982A}.year-panel{display:none}.year-panel.active{display:block}.year-banner{border-radius:12px;padding:28px 32px;margin:28px 0 24px;display:flex;align-items:flex-start;gap:20px}.year-banner .banner-icon{font-size:36px;flex-shrink:0;margin-top:2px}.year-banner h2{font-family:"DM Sans",sans-serif;font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:8px}.year-banner p{color:rgba(255,255,255,.88);font-size:14px;line-height:1.7;margin:0}.banner-y1{background:linear-gradient(135deg,#1A5276,#2471A3)}.banner-y2{background:linear-gradient(135deg,#1E8449,#27AE60)}.banner-y3{background:linear-gradient(135deg,#D35400,#E67E22)}.banner-y4{background:linear-gradient(135deg,#6C3483,#8E44AD)}.cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px}.roadmap-card{background:#fff;border-radius:12px;padding:22px 20px;border:1px solid #e2e6f0}.card-title{display:flex;align-items:center;gap:8px;font-weight:700;color:#0B1F4B;font-size:15px;margin-bottom:12px;padding-bottom:12px;border-bottom:2px solid #C9982A}.card-list{list-style:none;display:flex;flex-direction:column;gap:9px}.card-list li{font-size:13.5px;color:#3D4A5C;line-height:1.55;display:flex;gap:8px;align-items:flex-start}.card-list li::before{content:"--";color:#C9982A;font-weight:700;flex-shrink:0;margin-top:1px}.roadmap-body{max-width:1100px;margin:0 auto;padding:0 24px 60px}@media(max-width:900px){.cards-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.cards-grid{grid-template-columns:1fr}.year-tab-btn{padding:10px 14px;font-size:13px}}.skill-tabs{display:flex;gap:0;border-bottom:2px solid #e2e6f0;margin-bottom:28px;flex-wrap:wrap;}
+.skill-tab-btn{padding:11px 24px;font-size:14px;font-weight:600;color:#5A637A;background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;font-family:"DM Sans",sans-serif;transition:color .2s;white-space:nowrap;}
+.skill-tab-btn:hover{color:#0B1F4B;}
+.skill-tab-btn.active{color:#0B1F4B;border-bottom-color:#C9982A;}
+.skill-panel{display:none;}
+.skill-panel.active{display:block;}
+.skill-cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.skill-card{background:#fff;border-radius:12px;padding:22px 20px;border:1px solid #e2e6f0;box-shadow:0 1px 4px rgba(11,31,75,.05);}
+.skill-card-title{font-weight:700;color:#0B1F4B;font-size:14.5px;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #C9982A;}
+.skill-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.skill-list li{font-size:13.5px;color:#3D4A5C;line-height:1.5;}
+@media(max-width:900px){.skill-cards-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.skill-cards-grid{grid-template-columns:1fr;}.skill-tab-btn{padding:9px 14px;font-size:12px;}}</style></head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html"><div class="nav-logo-badge">BMS</div><div class="nav-brand-text"><span>BMS College of Engineering</span><span>Est. 1946 - Bengaluru</span></div></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="academics.html">Academics</a><a href="admissions.html">Admissions</a><a href="placements.html">Placements</a><a href="campus-life.html">Campus Life</a><a href="roadmap.html" class="active">Roadmap</a>
+      <a href="#" class="nav-cta" onclick="openModal()">Request Info</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMenu()">Home</a><a href="academics.html" onclick="closeMenu()">Academics</a><a href="admissions.html" onclick="closeMenu()">Admissions</a><a href="placements.html" onclick="closeMenu()">Placements</a><a href="campus-life.html" onclick="closeMenu()">Campus Life</a><a href="roadmap.html" onclick="closeMenu()">Roadmap</a><a href="#" onclick="openModal()">Request Info</a>
+  </div>
+</nav>
+<main id="main" class="roadmap-page">
+  <div class="roadmap-header">
+    <div class="roadmap-header-inner">
+      <h1>Year-wise Placement Roadmap</h1>
+      <p>Exactly what to do each year to land a top offer at BMSCE</p>
+      <div class="year-tabs" role="tablist">
+        <button class="year-tab-btn active" onclick="showYear('y1',this)">1st Year</button>
+        <button class="year-tab-btn" onclick="showYear('y2',this)">2nd Year</button>
+        <button class="year-tab-btn" onclick="showYear('y3',this)">3rd Year</button>
+        <button class="year-tab-btn" onclick="showYear('y4',this)">4th Year</button>
+      </div>
+    </div>
+  </div>
+  <div class="roadmap-body">
+    <div id="y1" class="year-panel active">
+      <div class="year-banner banner-y1"><div class="banner-icon">&#127807;</div><div><h2>1st Year - Build Your Foundation</h2><p>BMSCE's 1st year focuses on Engineering Maths, Physics, Chemistry &amp; C programming. Use this time to explore and build habits.</p></div></div>
+      <div class="cards-grid">
+        <div class="roadmap-card"><div class="card-title">&#128187; Programming</div><ul class="card-list"><li>Master C programming (VTU syllabus - do it seriously)</li><li>Start Python basics - variables, loops, functions, lists</li><li>Solve 50+ problems on HackerRank (Easy level)</li><li>Understand how to debug code</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#128208; Maths &amp; Logic</div><ul class="card-list"><li>Engineering Maths 1 &amp; 2 - score well, it matters for CGPA</li><li>Practice logical reasoning puzzles daily (10 min)</li><li>Learn basic number theory and modular arithmetic</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#128269; Explore Domains</div><ul class="card-list"><li>Attend BMSCE tech fests - Phase Shift, Utsav</li><li>Try Web Dev (HTML/CSS), App Dev, or AI/ML basics</li><li>Join college clubs: IEEE, CSI, ISTE, coding clubs</li><li>Attend guest lectures by industry professionals</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#128100; Profile Building</div><ul class="card-list"><li>Create a LinkedIn profile - add your college, skills</li><li>Start reading tech news (GeeksforGeeks, Dev.to)</li><li>Maintain CGPA above 7.5 from day one</li><li>No backlogs - this is critical for all top companies</li></ul></div>
+      </div>
+    </div>
+    <div id="y2" class="year-panel">
+      <div class="year-banner banner-y2"><div class="banner-icon" style="font-size:26px;font-weight:800;color:#fff;">&lt;/&gt;</div><div><h2>2nd Year - Pick Your Domain &amp; Go Deep</h2><p>This is when BMSCE students start diverging. DSA is the most important thing to start now. Companies like Amazon, Oracle, Cisco all test DSA heavily.</p></div></div>
+      <div class="cards-grid">
+        <div class="roadmap-card"><div class="card-title">&#127795; Data Structures &amp; Algorithms</div><ul class="card-list"><li>Arrays, Strings, Linked Lists, Stacks, Queues</li><li>Trees (Binary, BST, AVL), Graphs, Hashing</li><li>Start LeetCode - 2 Easy problems daily</li><li>Target: 100 problems solved by year end</li><li>Use Striver's A2Z DSA Sheet (free, highly recommended)</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#127919; Choose Your Domain</div><ul class="card-list"><li>SDE: Java or C++ + OOP concepts</li><li>Web Dev: HTML, CSS, JavaScript, React basics</li><li>AI/ML: Python, NumPy, Pandas, Matplotlib</li><li>Core (ECE/EEE/ME): VLSI, Embedded C, MATLAB</li><li>Stick to ONE domain - go deep, not wide</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#127959; Build Projects</div><ul class="card-list"><li>Build 1-2 small projects in your chosen domain</li><li>Push all code to GitHub - start your green streak</li><li>Write a proper README for each project</li><li>Deploy at least one project (Vercel/Netlify for web)</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#127941; Certifications &amp; CGPA</div><ul class="card-list"><li>Complete 1 NPTEL course (free, adds to resume)</li><li>HackerRank - earn Gold/Silver badges in your language</li><li>Maintain CGPA 7.5+ (companies like Adobe need 7.5)</li><li>Attend BMSCE's T&amp;P workshops and mock tests</li></ul></div>
+      </div>
+    </div>
+    <div id="y3" class="year-panel">
+      <div class="year-banner banner-y3"><div class="banner-icon">&#128640;</div><div><h2>3rd Year - Internships &amp; Serious Prep</h2><p>Most critical year. BMSCE's T&amp;P cell opens internship drives in Dec-Feb. Companies like Infosys InfyTQ, TCS iON, and many startups recruit 3rd year students. An internship converts to PPO 30-40% of the time.</p></div></div>
+      <div class="cards-grid">
+        <div class="roadmap-card"><div class="card-title">&#9889; Advanced DSA</div><ul class="card-list"><li>Dynamic Programming (most asked in Amazon, Google)</li><li>Greedy algorithms, Backtracking, Divide &amp; Conquer</li><li>Graph algorithms: BFS, DFS, Dijkstra, Topological Sort</li><li>LeetCode Medium - target 200+ problems total</li><li>Participate in Codeforces / CodeChef contests weekly</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#128188; Internship Strategy</div><ul class="card-list"><li>Apply Dec-Feb for summer internships (5th sem)</li><li>Platforms: LinkedIn, Internshala, Unstop, AngelList</li><li>Target: BMSCE campus internship drives first</li><li>Prepare for internship interviews (DSA + domain)</li><li>A good internship = best shot at PPO (direct offer)</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#128187; CS Core Subjects</div><ul class="card-list"><li>DBMS - SQL queries, normalization, transactions</li><li>OS - processes, threads, memory management, deadlocks</li><li>Computer Networks - TCP/IP, HTTP, DNS, OSI model</li><li>OOP - inheritance, polymorphism, design patterns</li><li>These are asked in every tech interview at BMSCE drives</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#128196; Resume &amp; Profile</div><ul class="card-list"><li>Build a clean 1-page resume (use Overleaf/Jake's template)</li><li>3+ projects on GitHub with good READMEs</li><li>LinkedIn: 500+ connections, post about your projects</li><li>Contribute to open source (adds credibility)</li><li>Get resume reviewed by BMSCE T&amp;P cell</li></ul></div>
+      </div>
+    </div>
+    <div id="y4" class="year-panel">
+      <div class="year-banner banner-y4"><div class="banner-icon">&#127942;</div><div><h2>4th Year - Crack Placements</h2><p>BMSCE placement season starts Oct-Nov. 383 companies visited in 2024-25. Highest package: Rs.51.5 LPA. Average: Rs.11.4 LPA. This is your moment - 4 years of prep pays off here.</p></div></div>
+      <div class="cards-grid">
+        <div class="roadmap-card"><div class="card-title">&#129504; Aptitude Prep</div><ul class="card-list"><li>Quantitative Aptitude - R.S. Aggarwal book (must)</li><li>Logical Reasoning &amp; Verbal Ability daily practice</li><li>IndiaBix, PrepInsta - company-specific mock tests</li><li>TCS NQT, Infosys Hackwithinfy, Wipro NLTH patterns</li><li>Take 2 full mock tests every week</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#127908; Interview Prep</div><ul class="card-list"><li>Mock interviews with peers and seniors every week</li><li>HR questions: "Tell me about yourself", "Why BMSCE?"</li><li>Technical rounds: DSA + CS fundamentals + projects</li><li>Use Pramp.com and Interviewing.io for mock interviews</li><li>Record yourself - improve communication and clarity</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#128197; Placement Season</div><ul class="card-list"><li>Register on BMSCE T&amp;P portal as soon as it opens</li><li>Attend every Pre-Placement Talk (PPT) - companies share hints</li><li>Apply to off-campus drives on LinkedIn simultaneously</li><li>Don't stop after first offer - keep applying for better ones</li><li>BMSCE allows multiple offers - use that advantage</li></ul></div>
+        <div class="roadmap-card"><div class="card-title">&#11088; Final Polish</div><ul class="card-list"><li>Tailor resume for each company type (product vs service)</li><li>Highlight internship experience and projects prominently</li><li>Prepare a crisp 2-minute self-introduction</li><li>Research each company before their PPT</li><li>Dress professionally for every drive - first impression matters</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+<!-- SKILLS SECTION -->
+<div style="background:#fff;border-top:1px solid #e2e6f0;padding:56px 0 64px;">
+  <div class="roadmap-body">
+    <div style="margin-bottom:28px;">
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2rem);color:#0B1F4B;font-weight:800;margin-bottom:6px;">Skills to Learn &mdash; Domain-wise</h2>
+      <p style="color:#5A637A;font-size:14px;">Curated for BMSCE students based on what companies actually test</p>
+    </div>
+    <div class="skill-tabs" role="tablist">
+      <button class="skill-tab-btn active" onclick="showSkill('sde',this)">SDE / Software</button>
+      <button class="skill-tab-btn" onclick="showSkill('aiml',this)">AI / ML</button>
+      <button class="skill-tab-btn" onclick="showSkill('webdev',this)">Web Dev</button>
+      <button class="skill-tab-btn" onclick="showSkill('core',this)">Core Engg</button>
+      <button class="skill-tab-btn" onclick="showSkill('aptitude',this)">Aptitude</button>
+    </div>
+
+    <!-- SDE -->
+    <div id="sde" class="skill-panel active">
+      <div class="skill-cards-grid">
+        <div class="skill-card"><div class="skill-card-title">Must-Learn Skills</div><ul class="skill-list"><li>Data Structures &amp; Algorithms (most important)</li><li>Object-Oriented Programming (Java/C++/Python)</li><li>DBMS &amp; SQL</li><li>OS &amp; Computer Networks</li><li>System Design (for senior/product roles)</li><li>Git &amp; GitHub</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title">Languages</div><ul class="skill-list"><li>C++ &mdash; best for competitive coding &amp; interviews</li><li>Java &mdash; widely used in service companies</li><li>Python &mdash; AI/ML + scripting + interviews</li><li>JavaScript &mdash; if targeting full-stack roles</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title" style="color:#2471A3;">Practice Platforms</div><ul class="skill-list"><li><a href="https://leetcode.com" target="_blank" style="color:#2471A3;text-decoration:none;font-weight:600;">LeetCode</a> &mdash; DSA interview prep</li><li><a href="https://codeforces.com" target="_blank" style="color:#2471A3;text-decoration:none;font-weight:600;">Codeforces</a> &mdash; competitive coding</li><li><a href="https://takeuforward.org" target="_blank" style="color:#2471A3;text-decoration:none;font-weight:600;">TakeUForward (Striver)</a> &mdash; A2Z DSA sheet</li><li><a href="https://geeksforgeeks.org" target="_blank" style="color:#2471A3;text-decoration:none;font-weight:600;">GeeksforGeeks</a> &mdash; concepts + company questions</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title">Free Courses</div><ul class="skill-list"><li>Striver's A2Z DSA Sheet (YouTube &mdash; free)</li><li>CS50 by Harvard (edX &mdash; free)</li><li>NPTEL DSA Course (free + certificate)</li><li>Abdul Bari Algorithms (YouTube &mdash; free)</li></ul></div>
+      </div>
+    </div>
+
+    <!-- AI/ML -->
+    <div id="aiml" class="skill-panel">
+      <div class="skill-cards-grid">
+        <div class="skill-card"><div class="skill-card-title">Core Skills</div><ul class="skill-list"><li>Python (NumPy, Pandas, Matplotlib, Seaborn)</li><li>Machine Learning (Scikit-learn)</li><li>Deep Learning (TensorFlow / PyTorch)</li><li>Statistics &amp; Probability</li><li>Data Visualization &amp; EDA</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title">Tools &amp; Frameworks</div><ul class="skill-list"><li>Jupyter Notebook / Google Colab</li><li>TensorFlow / Keras</li><li>PyTorch</li><li>Hugging Face (NLP/LLMs)</li><li>OpenCV (Computer Vision)</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title" style="color:#2471A3;">Practice Platforms</div><ul class="skill-list"><li><a href="https://kaggle.com" target="_blank" style="color:#2471A3;text-decoration:none;font-weight:600;">Kaggle</a> &mdash; competitions &amp; datasets</li><li>Google Colab &mdash; free GPU</li><li>Hugging Face &mdash; model hub</li><li>Papers With Code &mdash; latest research</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title">Free Courses</div><ul class="skill-list"><li>Andrew Ng ML Course (Coursera &mdash; audit free)</li><li>Fast.ai (fast.ai &mdash; completely free)</li><li>NPTEL AI/ML Courses (free + certificate)</li><li>Kaggle Learn (free micro-courses)</li></ul></div>
+      </div>
+    </div>
+
+    <!-- Web Dev -->
+    <div id="webdev" class="skill-panel">
+      <div class="skill-cards-grid">
+        <div class="skill-card"><div class="skill-card-title">Frontend</div><ul class="skill-list"><li>HTML5, CSS3, JavaScript (ES6+)</li><li>React.js (most in-demand)</li><li>Tailwind CSS / Bootstrap</li><li>TypeScript basics</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title">Backend</div><ul class="skill-list"><li>Node.js + Express.js</li><li>Python (Django / Flask)</li><li>REST APIs &amp; JSON</li><li>MongoDB / PostgreSQL / MySQL</li><li>Authentication (JWT, OAuth)</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title">DevOps &amp; Tools</div><ul class="skill-list"><li>Git &amp; GitHub (essential)</li><li>Docker basics</li><li>Vercel / Netlify (deploy frontend)</li><li>AWS basics (EC2, S3)</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title" style="color:#2471A3;">Free Resources</div><ul class="skill-list"><li><a href="https://freecodecamp.org" target="_blank" style="color:#2471A3;text-decoration:none;font-weight:600;">freeCodeCamp</a> (free)</li><li><a href="https://theodinproject.com" target="_blank" style="color:#2471A3;text-decoration:none;font-weight:600;">The Odin Project</a> (free)</li><li><a href="https://developer.mozilla.org" target="_blank" style="color:#2471A3;text-decoration:none;font-weight:600;">MDN Web Docs</a> (free)</li><li>CS50W by Harvard (edX &mdash; free)</li></ul></div>
+      </div>
+    </div>
+
+    <!-- Core Engg -->
+    <div id="core" class="skill-panel">
+      <div class="skill-cards-grid">
+        <div class="skill-card"><div class="skill-card-title">ECE Skills</div><ul class="skill-list"><li>VLSI Design (Verilog / VHDL)</li><li>Embedded Systems (Arduino, ARM Cortex)</li><li>Signal Processing (DSP)</li><li>PCB Design (KiCad / Altium)</li><li>Communication Systems</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title">EEE / ME Skills</div><ul class="skill-list"><li>MATLAB / Simulink</li><li>AutoCAD / SolidWorks / CATIA</li><li>PLC Programming</li><li>Power Systems &amp; Drives</li><li>Thermodynamics &amp; Fluid Mechanics</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title">GATE Preparation</div><ul class="skill-list"><li>Start from 3rd year &mdash; 2 years is ideal</li><li>NPTEL subject-wise courses (free)</li><li>Made Easy / ACE Academy study material</li><li>Previous 10 years GATE papers (must)</li><li>GATE score opens PSU doors: BHEL, NTPC, ISRO</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title">Target Companies</div><ul class="skill-list"><li>Bosch, Honeywell, Siemens, ABB (product)</li><li>Mercedes-Benz R&amp;D, Qualcomm (premium)</li><li>ISRO, DRDO, BEL, HAL (PSU &mdash; GATE)</li><li>L&amp;T, Caterpillar, Volvo (core MNC)</li></ul></div>
+      </div>
+    </div>
+
+    <!-- Aptitude -->
+    <div id="aptitude" class="skill-panel">
+      <div class="skill-cards-grid">
+        <div class="skill-card"><div class="skill-card-title">Quantitative Aptitude</div><ul class="skill-list"><li>Number Systems, HCF/LCM, Percentages</li><li>Profit &amp; Loss, Simple &amp; Compound Interest</li><li>Time, Speed &amp; Distance</li><li>Permutation, Combination &amp; Probability</li><li>Data Interpretation</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title">Logical Reasoning</div><ul class="skill-list"><li>Syllogisms, Blood Relations</li><li>Seating Arrangements, Puzzles</li><li>Coding-Decoding, Series</li><li>Direction Sense, Clocks &amp; Calendars</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title">Verbal Ability</div><ul class="skill-list"><li>Reading Comprehension</li><li>Grammar &amp; Vocabulary</li><li>Sentence Correction &amp; Para Jumbles</li><li>Error Spotting</li></ul></div>
+        <div class="skill-card"><div class="skill-card-title" style="color:#2471A3;">Practice Resources</div><ul class="skill-list"><li><a href="https://indiabix.com" target="_blank" style="color:#2471A3;text-decoration:none;font-weight:600;">IndiaBix</a> &mdash; free aptitude tests</li><li><a href="https://prepinsta.com" target="_blank" style="color:#2471A3;text-decoration:none;font-weight:600;">PrepInsta</a> &mdash; company-wise prep</li><li>R.S. Aggarwal &mdash; Quantitative Aptitude (book)</li><li>Unstop &mdash; mock placement tests</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:12px;"><div class="nav-logo-badge">BMS</div><div><div style="color:white;font-family:'Playfair Display',serif;font-weight:700;">BMS College of Engineering</div><div style="font-size:12px;color:var(--gold-light);">Est. 1946 - Bengaluru</div></div></div>
+        <p>Bull Temple Road, Basavanagudi, Bengaluru - 560019, Karnataka, India.</p>
+        <div class="footer-social"><a href="#" class="social-btn" aria-label="Facebook">f</a><a href="#" class="social-btn" aria-label="LinkedIn">in</a></div>
+      </div>
+      <div class="footer-col"><h4>Academics</h4><a href="academics.html">B.E. Programs</a><a href="academics.html">M.Tech / MBA / MCA</a></div>
+      <div class="footer-col"><h4>Quick Links</h4><a href="admissions.html">Admissions 2025-26</a><a href="placements.html">Placement Data</a><a href="roadmap.html">Placement Roadmap</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="tel:+918026622130">+91 80 2662 2130</a><a href="mailto:principal@bmsce.ac.in">principal@bmsce.ac.in</a></div>
+    </div>
+    <div class="footer-bottom"><p>2025 BMS College of Engineering, Bengaluru. All rights reserved.</p><div class="footer-links"><a href="#">Privacy Policy</a><a href="#">RTI</a></div></div>
+  </div>
+</footer>
+<button class="float-btn" onclick="openModal()" aria-label="Request Information">&#128236; <span>Request Info</span></button>
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">X</button>
+    <h3 id="modalTitle">Request Information</h3>
+    <p>Tell us your interests and we will send personalized info about BMSCE programs.</p>
+    <div class="modal-form">
+      <input type="text" placeholder="Full Name *" required>
+      <input type="email" placeholder="Email Address *" required>
+      <input type="tel" placeholder="Phone Number">
+      <select><option value="">Program of Interest</option><option>B.E. CSE</option><option>B.E. AI and ML</option><option>B.E. ECE</option><option>M.Tech</option><option>MBA / MCA</option></select>
+      <button class="btn-primary" style="justify-content:center;" onclick="submitForm()">Send Request</button>
+    </div>
+  </div>
+</div>
+<script src="shared.js"></script>
+<script>
+function showYear(id,btn){
+  document.querySelectorAll('.year-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.year-tab-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+function showSkill(id,btn){
+  document.querySelectorAll('.skill-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.skill-tab-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
+
+
+

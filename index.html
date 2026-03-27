@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMS College of Engineering – Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html" aria-label="BMS College of Engineering Home">
+      <div class="nav-logo-badge">BMS</div>
+      <div class="nav-brand-text">
+        <span>BMS College of Engineering</span>
+        <span>Est. 1946 · Bengaluru</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="academics.html">Academics</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html">Placements</a>
+      <a href="campus-life.html">Campus Life</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="#" class="nav-cta" onclick="openModal()">Request Info</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="academics.html" onclick="closeMenu()">Academics</a>
+    <a href="admissions.html" onclick="closeMenu()">Admissions</a>
+    <a href="placements.html" onclick="closeMenu()">Placements</a>
+    <a href="campus-life.html" onclick="closeMenu()">Campus Life</a>
+    <a href="roadmap.html" onclick="closeMenu()">Roadmap</a>
+    <a href="#" onclick="openModal()">Request Info</a>
+  </div>
+</nav>
+
+<div class="ticker-bar" role="marquee" aria-label="Campus news">
+  <div class="ticker-inner">
+    <span class="ticker-item">Placements 2025: Highest Package ₹51.5 LPA · 968 Students Placed</span>
+    <span class="ticker-item">NAAC A++ Grade · CGPA 3.83/4.0 – Highest in India</span>
+    <span class="ticker-item">NIRF 2024 Engineering Rank: #101-150 Band Nationally</span>
+    <span class="ticker-item">Phase Shift Tech Fest 2025 — Registration Open</span>
+    <span class="ticker-item">New 5G Use-Case Lab Launched — Funded by Government of India</span>
+    <span class="ticker-item">UGC Autonomous Status Extended: 2022–23 to 2031–32</span>
+    <span class="ticker-item">Admissions 2025–26 Open via KCET &amp; COMEDK</span>
+    <span class="ticker-item">Placements 2025: Highest Package ₹51.5 LPA · 968 Students Placed</span>
+    <span class="ticker-item">NAAC A++ Grade · CGPA 3.83/4.0 – Highest in India</span>
+    <span class="ticker-item">NIRF 2024 Engineering Rank: #101-150 Band Nationally</span>
+    <span class="ticker-item">Phase Shift Tech Fest 2025 — Registration Open</span>
+    <span class="ticker-item">New 5G Use-Case Lab Launched — Funded by Government of India</span>
+  </div>
+</div>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-circle hero-circle-1"></div>
+  <div class="hero-circle hero-circle-2"></div>
+  <div class="hero-circle hero-circle-3"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><div class="hero-dot"></div><span>India's First Private Engineering College</span></div>
+      <h1 class="hero-title">Engineering <em>Excellence</em> Since 1946</h1>
+      <p class="hero-sub">BMS College of Engineering, Bengaluru — NAAC A++ accredited, NBA recognized, and home to over 6,000 students pursuing their dreams in the heart of India's Silicon Valley.</p>
+      <div class="hero-btns">
+        <a href="admissions.html" class="btn-primary">Apply Now →</a>
+        <a href="academics.html" class="btn-outline">Explore Programs</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card"><span class="stat-num">78+</span><div class="stat-label">Years of Excellence</div></div>
+        <div class="stat-card"><span class="stat-num">40K+</span><div class="stat-label">Alumni Worldwide</div></div>
+        <div class="stat-card"><span class="stat-num">300+</span><div class="stat-label">Recruiting Companies</div></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-img-grid">
+
+        <!-- Main Campus Building -->
+        <div class="hero-img-card" style="grid-column:span 2;aspect-ratio:16/7;padding:0;overflow:hidden;position:relative;">
+          <img src="campus.jpg"
+               alt="BMS College of Engineering Main Campus"
+               style="width:100%;height:100%;object-fit:cover;display:block;"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="campus-illustration" style="display:none;">🏛️<div style="font-size:14px;color:rgba(255,255,255,.6);">Bull Temple Road Campus, Basavanagudi</div></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(7,19,48,.6) 0%,transparent 55%);"></div>
+          <div class="hero-img-label">Main Campus Building</div>
+        </div>
+
+        <!-- Research Labs -->
+        <div class="hero-img-card" style="padding:0;overflow:hidden;position:relative;">
+          <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=600"
+               alt="Research Labs"
+               style="width:100%;height:100%;object-fit:cover;display:block;"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="campus-illustration" style="display:none;">🔬<div style="font-size:12px;color:rgba(255,255,255,.6);">Research Labs</div></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(7,19,48,.65) 0%,transparent 55%);"></div>
+          <div class="hero-img-label">Research Labs</div>
+        </div>
+
+        <!-- Convocation -->
+        <div class="hero-img-card" style="padding:0;overflow:hidden;position:relative;">
+          <img src="https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=600"
+               alt="Convocation Ceremony"
+               style="width:100%;height:100%;object-fit:cover;display:block;"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="campus-illustration" style="display:none;">🎓<div style="font-size:12px;color:rgba(255,255,255,.6);">Convocation</div></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(60,10,10,.65) 0%,transparent 55%);"></div>
+          <div class="hero-img-label">Convocation</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK LINKS -->
+<section class="quick-links" aria-label="Quick links">
+  <div class="container">
+    <div class="section-label"><span>Navigate</span></div>
+    <h2 class="section-title">Explore BMSCE</h2>
+    <div class="ql-grid">
+      <a class="ql-card" href="academics.html"><div class="ql-icon">🏫</div><div class="ql-title">Departments</div></a>
+      <a class="ql-card" href="admissions.html"><div class="ql-icon">📋</div><div class="ql-title">Admissions</div></a>
+      <a class="ql-card" href="placements.html"><div class="ql-icon">💼</div><div class="ql-title">Placements</div></a>
+      <a class="ql-card" href="campus-life.html"><div class="ql-icon">🌿</div><div class="ql-title">Campus Life</div></a>
+      <a class="ql-card" href="#research"><div class="ql-icon">🔭</div><div class="ql-title">Research</div></a>
+      <a class="ql-card" href="#"><div class="ql-icon">📚</div><div class="ql-title">Library</div></a>
+      <a class="ql-card" href="#"><div class="ql-icon">🤝</div><div class="ql-title">Alumni</div></a>
+      <a class="ql-card" href="#"><div class="ql-icon">🎉</div><div class="ql-title">Events</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / RESEARCH -->
+<section id="research" class="about" aria-label="About and Research">
+  <div class="container">
+    <div class="section-label"><span>About &amp; Research</span></div>
+    <h2 class="section-title">Legacy, Rankings &amp; Innovation</h2>
+    <div class="about-grid">
+      <div>
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:24px;">Founded in 1946 by Bhusanayana Mukundadas Sreenivasaiah, BMSCE was India's first private engineering college. Run by the BMS Educational Trust and located opposite the iconic Bull Temple in Basavanagudi, it has shaped over 40,000 engineers who lead organizations across the globe.</p>
+        <div class="ranking-cards">
+          <div class="rank-card"><span class="rank-num">#101–150</span><div class="rank-org">NIRF Engineering</div><div class="rank-year">2024</div></div>
+          <div class="rank-card"><span class="rank-num">A++</span><div class="rank-org">NAAC Grade</div><div class="rank-year">CGPA 3.83/4.0</div></div>
+          <div class="rank-card"><span class="rank-num">#5</span><div class="rank-org">Private Engg. College</div><div class="rank-year">Times 2023</div></div>
+          <div class="rank-card"><span class="rank-num">#24</span><div class="rank-org">India Today Engg.</div><div class="rank-year">2023</div></div>
+        </div>
+        <div class="accreditations" style="margin-top:24px;">
+          <span class="accred-badge">AICTE Approved</span>
+          <span class="accred-badge">UGC Autonomous</span>
+          <span class="accred-badge">NBA Tier-I</span>
+          <span class="accred-badge">ISO 14001:2015</span>
+          <span class="accred-badge">VTU Affiliated</span>
+          <span class="accred-badge">TEQIP-III</span>
+          <span class="accred-badge">5G Lab (GoI)</span>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:20px;font-size:1.3rem;">Research Highlights</h3>
+        <div class="research-list">
+          <div class="research-item"><div class="research-icon">🔬</div><div><div class="research-title">14 Research Centers</div><div class="research-desc">PhD and M.Sc. (Engineering by Research) degrees offered across Science, Engineering, and Management disciplines with 350+ active research scholars.</div></div></div>
+          <div class="research-item"><div class="research-icon">📡</div><div><div class="research-title">5G Use-Case Laboratory</div><div class="research-desc">One of only 100 institutions in India awarded a 5G Use-Case Lab by the Government of India, enabling cutting-edge telecom research.</div></div></div>
+          <div class="research-item"><div class="research-icon">🌐</div><div><div class="research-title">GIAN &amp; Global Collaboration</div><div class="research-desc">Recipient of the MHRD GIAN scheme – 12 projects worth ₹76.16 lakhs completed. Only Indian partner of the Melton Foundation, USA.</div></div></div>
+          <div class="research-item"><div class="research-icon">🏆</div><div><div class="research-title">160+ PhD Graduates</div><div class="research-desc">AICTE National Doctoral Fellowship (NDF) recipient since 2018–19. QIP Centre for faculty development in Engineering &amp; Technology.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" aria-label="Student testimonials">
+  <div class="container">
+    <div class="section-label"><span>Testimonials</span></div>
+    <h2 class="section-title">Voices from Our Community</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card"><p class="testimonial-text">BMSCE gave me the foundation to build a career at a top tech firm. The faculty support, lab facilities, and placement training were genuinely world-class. Phase Shift is a memory I'll carry forever.</p><div class="testimonial-author"><div class="author-avatar">A</div><div><div class="author-name">Arjun Nair</div><div class="author-batch">B.E. CSE · Batch of 2023 · Amazon SDE</div></div></div></div>
+      <div class="testimonial-card"><p class="testimonial-text">As a girl from a small town, BMSCE felt welcoming from day one. The campus is safe, the professors are accessible, and the alumni network opened doors I never expected.</p><div class="testimonial-author"><div class="author-avatar">P</div><div><div class="author-name">Priya Subramaniam</div><div class="author-batch">B.E. ECE · Batch of 2024 · Texas Instruments</div></div></div></div>
+      <div class="testimonial-card"><p class="testimonial-text">The autonomy in curriculum means we actually studied cutting-edge topics. My final year project on 5G beamforming got me a direct research role – something I credit entirely to BMSCE's environment.</p><div class="testimonial-author"><div class="author-avatar">R</div><div><div class="author-name">Rahul Krishnaswamy</div><div class="author-batch">B.E. ECE · Batch of 2022 · Qualcomm</div></div></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- CONTACT SECTION -->
+<section style="background:#f4f6fb;padding:72px 0;" aria-label="Contact">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;max-width:1000px;margin:0 auto;">
+
+      <!-- Left: contact details -->
+      <div>
+        <div class="section-label"><span>Contact</span></div>
+        <h2 class="section-title" style="margin-bottom:32px;">Get in Touch</h2>
+
+        <div style="display:flex;flex-direction:column;gap:0;">
+          <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid #dde1ec;">
+            <span style="font-size:18px;margin-top:2px;flex-shrink:0;">📍</span>
+            <span style="font-size:14px;color:#3D4A5C;line-height:1.6;">Bull Temple Road, Basavanagudi, Bengaluru — 560019, Karnataka, India</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #dde1ec;">
+            <span style="font-size:18px;flex-shrink:0;">📞</span>
+            <a href="tel:+918026622130" style="font-size:14px;color:#3D4A5C;text-decoration:none;">+91-80-26622130 / 26622131</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #dde1ec;">
+            <span style="font-size:18px;flex-shrink:0;">✉️</span>
+            <a href="mailto:principal@bmsce.ac.in" style="font-size:14px;color:#3D4A5C;text-decoration:none;">principal@bmsce.ac.in</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #dde1ec;">
+            <span style="font-size:18px;flex-shrink:0;">✉️</span>
+            <a href="mailto:placement@bmsce.ac.in" style="font-size:14px;color:#3D4A5C;text-decoration:none;">placement@bmsce.ac.in <span style="color:#5A637A;">(T&amp;P Cell)</span></a>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px 0;">
+            <span style="font-size:18px;flex-shrink:0;">🌐</span>
+            <a href="https://bmsce.ac.in" target="_blank" rel="noopener" style="font-size:14px;color:#0B1F4B;font-weight:600;text-decoration:none;">www.bmsce.ac.in</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Google Map embed -->
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 4px 24px rgba(11,31,75,.12);border:1px solid #dde1ec;">
+        <iframe
+          title="BMS College of Engineering Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5880!2d77.5696!3d12.9432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae158a4a1d1f4b%3A0x5f2e3b7c8d9e1a2b!2sBMS%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%"
+          height="280"
+          style="border:0;display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="nav-logo-badge">BMS</div>
+          <div><div style="color:white;font-family:'Playfair Display',serif;font-weight:700;">BMS College of Engineering</div><div style="font-size:12px;color:var(--gold-light);">Est. 1946 · Bengaluru</div></div>
+        </div>
+        <p>Bull Temple Road, Basavanagudi, Bengaluru – 560019, Karnataka, India.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Academics</h4>
+        <a href="academics.html">B.E. Programs</a>
+        <a href="academics.html">M.Tech / MBA / MCA</a>
+        <a href="academics.html">Ph.D. Programs</a>
+        <a href="#">Timetable</a>
+        <a href="#">Results</a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="admissions.html">Admissions 2025–26</a>
+        <a href="placements.html">Placement Data</a>
+        <a href="#">Fee Structure</a>
+        <a href="#">Scholarships</a>
+        <a href="#">Alumni Portal</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+918026622130">📞 +91 80 2662 2130</a>
+        <a href="mailto:principal@bmsce.ac.in">✉️ principal@bmsce.ac.in</a>
+        <a href="https://bmsce.ac.in" target="_blank" rel="noopener">🌐 bmsce.ac.in</a>
+        <a href="#" onclick="openModal()">📬 Request Info</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 BMS College of Engineering, Bengaluru. All rights reserved. | Affiliated to VTU, Belagavi.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Grievance Portal</a>
+        <a href="#">RTI</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="float-btn" onclick="openModal()" aria-label="Request Information">📬 <span>Request Info</span></button>
+
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close dialog">✕</button>
+    <h3 id="modalTitle">Request Information</h3>
+    <p>Tell us about your interests and we'll send you personalized information about BMSCE programs, fees, and deadlines.</p>
+    <div class="modal-form">
+      <input type="text" placeholder="Full Name *" aria-label="Full Name" required>
+      <input type="email" placeholder="Email Address *" aria-label="Email" required>
+      <input type="tel" placeholder="Phone Number" aria-label="Phone">
+      <select aria-label="Program of interest">
+        <option value="">Program of Interest</option>
+        <option>B.E. Computer Science &amp; Engineering</option>
+        <option>B.E. AI &amp; Machine Learning</option>
+        <option>B.E. Electronics &amp; Communication</option>
+        <option>B.E. Mechanical Engineering</option>
+        <option>M.Tech Programs</option>
+        <option>MBA / MCA</option>
+        <option>Ph.D.</option>
+      </select>
+      <button class="btn-primary" style="justify-content:center;" onclick="submitForm()">Send Request →</button>
+    </div>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>

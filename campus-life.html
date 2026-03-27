@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life at BMSCE – BMS College of Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .clubs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 32px; }
+  .club-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; transition: all .2s; }
+  .club-card:hover { border-color: var(--gold); box-shadow: var(--shadow); transform: translateY(-3px); }
+  .club-icon { font-size: 32px; margin-bottom: 10px; }
+  .club-name { font-weight: 700; color: var(--navy); font-size: 15px; margin-bottom: 6px; }
+  .club-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+  .facility-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 32px; }
+  .facility-card { background: var(--off-white); border-radius: var(--radius); padding: 20px; text-align: center; }
+  .facility-icon { font-size: 32px; margin-bottom: 8px; }
+  .facility-name { font-weight: 700; color: var(--navy); }
+  .facility-desc { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">
+      <div class="nav-logo-badge">BMS</div>
+      <div class="nav-brand-text"><span>BMS College of Engineering</span><span>Est. 1946 · Bengaluru</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="academics.html">Academics</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html">Placements</a>
+      <a href="campus-life.html" class="active">Campus Life</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="#" class="nav-cta" onclick="openModal()">Request Info</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="academics.html" onclick="closeMenu()">Academics</a>
+    <a href="admissions.html" onclick="closeMenu()">Admissions</a>
+    <a href="placements.html" onclick="closeMenu()">Placements</a>
+    <a href="campus-life.html" onclick="closeMenu()">Campus Life</a>
+    <a href="roadmap.html" onclick="closeMenu()">Roadmap</a>
+    <a href="#" onclick="openModal()">Request Info</a>
+  </div>
+</nav>
+
+<main id="main">
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-badge" style="margin-bottom:16px;"><div class="hero-dot"></div><span>Student Life</span></div>
+    <h1>Life at <em>BMSCE</em></h1>
+    <p>Spread across 11 acres in the heart of Bengaluru, BMSCE offers a vibrant, inclusive campus where learning meets life — from tech fests to cultural celebrations.</p>
+  </div>
+</div>
+
+<!-- Gallery -->
+<section class="campus-life" aria-label="Campus Gallery">
+  <div class="container">
+    <div class="section-label"><span>Campus Gallery</span></div>
+    <h2 class="section-title">Experience the Campus</h2>
+    <div class="gallery-grid" role="list">
+
+      <!-- Cultural Fest - wide -->
+      <div class="gallery-item wide" role="listitem" tabindex="0" aria-label="Annual Cultural Fest Utsav" style="padding:0;overflow:hidden;position:relative;">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80" alt="Cultural Festival" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,75,.75) 0%,rgba(11,31,75,.15) 60%,transparent 100%);"></div>
+        <div class="gallery-tag">Cultural</div>
+        <div class="gallery-caption" style="position:absolute;bottom:14px;left:14px;padding:0;font-size:14px;">Utsav — Annual Cultural Festival</div>
+      </div>
+
+      <!-- Sports -->
+      <div class="gallery-item" role="listitem" tabindex="0" aria-label="Sports facilities" style="padding:0;overflow:hidden;position:relative;">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Sports & Fitness" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,75,.75) 0%,transparent 60%);"></div>
+        <div class="gallery-tag">Sports</div>
+        <div class="gallery-caption" style="position:absolute;bottom:14px;left:14px;padding:0;">Sports &amp; Fitness</div>
+      </div>
+
+      <!-- Tech Fest -->
+      <div class="gallery-item" role="listitem" tabindex="0" aria-label="Phase Shift Tech Fest" style="padding:0;overflow:hidden;position:relative;">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" alt="Tech Fest" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(60,10,10,.8) 0%,transparent 60%);"></div>
+        <div class="gallery-tag">Technical</div>
+        <div class="gallery-caption" style="position:absolute;bottom:14px;left:14px;padding:0;">Phase Shift — Tech Fest</div>
+      </div>
+
+      <!-- Central Library -->
+      <div class="gallery-item" role="listitem" tabindex="0" aria-label="Central Library" style="padding:0;overflow:hidden;position:relative;">
+        <img src="library.jpg" alt="Central Library — BMSCE" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.src='https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&q=80';">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,75,.75) 0%,transparent 60%);"></div>
+        <div class="gallery-tag">Academics</div>
+        <div class="gallery-caption" style="position:absolute;bottom:14px;left:14px;padding:0;">Central Library</div>
+      </div>
+
+      <!-- Labs -->
+      <div class="gallery-item" role="listitem" tabindex="0" aria-label="State-of-the-art labs" style="padding:0;overflow:hidden;position:relative;">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="State-of-the-Art Labs" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(20,20,60,.8) 0%,transparent 60%);"></div>
+        <div class="gallery-tag">Facilities</div>
+        <div class="gallery-caption" style="position:absolute;bottom:14px;left:14px;padding:0;">State-of-the-Art Labs</div>
+      </div>
+
+      <!-- Hostel - wide -->
+      <div class="gallery-item wide" role="listitem" tabindex="0" aria-label="Hostel and student housing" style="padding:0;overflow:hidden;position:relative;">
+        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=900&q=80" alt="Hostel & Student Housing" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(50,30,5,.8) 0%,transparent 60%);"></div>
+        <div class="gallery-tag">Residential</div>
+        <div class="gallery-caption" style="position:absolute;bottom:14px;left:14px;padding:0;">Hostel &amp; Student Housing</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Facilities -->
+<section style="background:var(--off-white);padding:64px 0;" aria-label="Campus Facilities">
+  <div class="container">
+    <div class="section-label"><span>Facilities</span></div>
+    <h2 class="section-title">World-Class Infrastructure</h2>
+    <div class="facility-grid">
+      <div class="facility-card"><div class="facility-icon">📶</div><div class="facility-name">Wi-Fi Campus</div><div class="facility-desc">24/7 High-Speed Internet across all buildings</div></div>
+      <div class="facility-card"><div class="facility-icon">🏥</div><div class="facility-name">Health Centre</div><div class="facility-desc">On-Campus Medical Care with qualified staff</div></div>
+      <div class="facility-card"><div class="facility-icon">🍽️</div><div class="facility-name">Canteen &amp; Mess</div><div class="facility-desc">Multiple food options — veg &amp; non-veg</div></div>
+      <div class="facility-card"><div class="facility-icon">🏟️</div><div class="facility-name">Auditorium</div><div class="facility-desc">1200-seat auditorium for events &amp; conferences</div></div>
+      <div class="facility-card"><div class="facility-icon">🌐</div><div class="facility-name">Melton Foundation</div><div class="facility-desc">Global Exchange — USA Partner program</div></div>
+      <div class="facility-card"><div class="facility-icon">🔬</div><div class="facility-name">Research Labs</div><div class="facility-desc">14 specialized research centers &amp; 5G lab</div></div>
+      <div class="facility-card"><div class="facility-icon">🏊</div><div class="facility-name">Sports Complex</div><div class="facility-desc">Basketball, volleyball, cricket, gym &amp; more</div></div>
+      <div class="facility-card"><div class="facility-icon">🚌</div><div class="facility-name">Transport</div><div class="facility-desc">Bus service covering major areas of Bengaluru</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Clubs & Activities -->
+<section style="background:var(--white);padding:64px 0;" aria-label="Clubs and Activities">
+  <div class="container">
+    <div class="section-label"><span>Student Life</span></div>
+    <h2 class="section-title">Clubs &amp; Activities</h2>
+    <p class="section-desc">Over 40 student clubs and associations — from robotics to dance, there's a community for everyone.</p>
+    <div class="clubs-grid">
+      <div class="club-card"><div class="club-icon">🤖</div><div class="club-name">Robotics Club</div><div class="club-desc">Build and compete with autonomous robots at national-level competitions.</div></div>
+      <div class="club-card"><div class="club-icon">💻</div><div class="club-name">Coding Club</div><div class="club-desc">Competitive programming, hackathons, and open-source contributions.</div></div>
+      <div class="club-card"><div class="club-icon">🎭</div><div class="club-name">Drama Club</div><div class="club-desc">Stage productions, street plays, and inter-college drama competitions.</div></div>
+      <div class="club-card"><div class="club-icon">🎵</div><div class="club-name">Music Club</div><div class="club-desc">Classical and contemporary music — performances at Utsav and beyond.</div></div>
+      <div class="club-card"><div class="club-icon">📸</div><div class="club-name">Photography Club</div><div class="club-desc">Workshops, photo walks, and exhibitions across campus.</div></div>
+      <div class="club-card"><div class="club-icon">🌱</div><div class="club-name">NSS / NCC</div><div class="club-desc">Community service, social outreach, and national cadet corps activities.</div></div>
+      <div class="club-card"><div class="club-icon">🚀</div><div class="club-name">Entrepreneurship Cell</div><div class="club-desc">Startup incubation, mentorship, and pitch competitions for aspiring founders.</div></div>
+      <div class="club-card"><div class="club-icon">♟️</div><div class="club-name">Chess &amp; Games Club</div><div class="club-desc">Strategy games, tournaments, and inter-college championships.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" aria-label="Student testimonials">
+  <div class="container">
+    <div class="section-label"><span>Student Voices</span></div>
+    <h2 class="section-title">What Students Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card"><p class="testimonial-text">BMSCE gave me the foundation to build a career at a top tech firm. The faculty support, lab facilities, and placement training were genuinely world-class. Phase Shift is a memory I'll carry forever.</p><div class="testimonial-author"><div class="author-avatar">A</div><div><div class="author-name">Arjun Nair</div><div class="author-batch">B.E. CSE · Batch of 2023 · Amazon SDE</div></div></div></div>
+      <div class="testimonial-card"><p class="testimonial-text">As a girl from a small town, BMSCE felt welcoming from day one. The campus is safe, the professors are accessible, and the alumni network opened doors I never expected.</p><div class="testimonial-author"><div class="author-avatar">P</div><div><div class="author-name">Priya Subramaniam</div><div class="author-batch">B.E. ECE · Batch of 2024 · Texas Instruments</div></div></div></div>
+      <div class="testimonial-card"><p class="testimonial-text">The autonomy in curriculum means we actually studied cutting-edge topics. My final year project on 5G beamforming got me a direct research role — something I credit entirely to BMSCE's environment.</p><div class="testimonial-author"><div class="author-avatar">R</div><div><div class="author-name">Rahul Krishnaswamy</div><div class="author-batch">B.E. ECE · Batch of 2022 · Qualcomm</div></div></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="nav-logo-badge">BMS</div>
+          <div><div style="color:white;font-family:'Playfair Display',serif;font-weight:700;">BMS College of Engineering</div><div style="font-size:12px;color:var(--gold-light);">Est. 1946 · Bengaluru</div></div>
+        </div>
+        <p>Bull Temple Road, Basavanagudi, Bengaluru – 560019, Karnataka, India.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Academics</h4><a href="academics.html">B.E. Programs</a><a href="academics.html">M.Tech / MBA / MCA</a><a href="academics.html">Ph.D. Programs</a></div>
+      <div class="footer-col"><h4>Quick Links</h4><a href="admissions.html">Admissions 2025–26</a><a href="placements.html">Placement Data</a><a href="#">Fee Structure</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="tel:+918026622130">📞 +91 80 2662 2130</a><a href="mailto:principal@bmsce.ac.in">✉️ principal@bmsce.ac.in</a><a href="#" onclick="openModal()">📬 Request Info</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 BMS College of Engineering, Bengaluru. All rights reserved.</p>
+      <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Accessibility</a><a href="#">RTI</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="float-btn" onclick="openModal()" aria-label="Request Information">📬 <span>Request Info</span></button>
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <h3 id="modalTitle">Request Information</h3>
+    <p>Tell us your interests and we'll send personalized info about BMSCE programs.</p>
+    <div class="modal-form">
+      <input type="text" placeholder="Full Name *" required>
+      <input type="email" placeholder="Email Address *" required>
+      <input type="tel" placeholder="Phone Number">
+      <select><option value="">Program of Interest</option><option>B.E. CSE</option><option>B.E. AI &amp; ML</option><option>B.E. ECE</option><option>M.Tech</option><option>MBA / MCA</option></select>
+      <button class="btn-primary" style="justify-content:center;" onclick="submitForm()">Send Request →</button>
+    </div>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>
